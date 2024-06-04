@@ -42,6 +42,32 @@
             margin-top: 40px; /* Space before the line */
             margin-bottom: 40px; /* Space after the line */
         }
+
+        .spaced-paragraph {
+            margin-top: 30cm; /* Adjust the value to increase or decrease the spacing */
+        }
+
+        .centered-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+
+        .section-title h2 {
+            margin-top: 20px;
+            font-size: 1.0cm;
+        }
+
+        .section-title h3 {
+            font-size: 0.75cm;
+        }
+
+        .indented-section {
+            
+            margin-left: 30px;
+            margin-top: 20px;
+        }
     </style>
 
 </head>
@@ -68,10 +94,10 @@
     <section id="about">
         <div class="container">
             <div class="section-title text-center">
-                <h2>Rubik's Cube</h2>
+                <h1>Rubik's Cube</h1>
                 <style>
-                    h2{
-                        font-size: 1.2cm;
+                    h1{
+                        font-size: 1.4cm;
                         color: #333;
                     }
                 </style>
@@ -92,13 +118,29 @@
 <div id="services" class="section lb">
     <div class="container">
         <div class="section-title text-left">
-            <h3>Section a</h3>
-            <p>.</p>
+            <h2>Personal Records </h2>
+            <p>Here's my 
+                <a href="https://www.worldcubeassociation.org/persons/2016HUAI01">profile page</a>
+                in the World Cube Association (WCA) website. College and grad school have been 
+                filled with intense academic demands but I'm hoping to practice more and get back to competitions. 
+            </p>
+            <p class="spaced-paragraph">
+                Although I couldn't reach the level of world-class Rubik's Cube players, I still find great
+                satisfaction in making even a slight progress. Whether it's mastering a more efficient algorithm, combining
+                steps more smoothly, or creating a novel solution, each small achievement keeps me motivated. 
+                For example, I've recently taken up 5x5 speedcubing and have been tracking my solving times with 
+                Python. Below is a chart that plots my times against the number of attempts, with running 
+                averages overlaid. Watching the overall trend gradually decrease, despite some first-order fluctuations, 
+                gives me a sense of accomplishment.
+            </p>
+            <p class="spaced-paragraph">
+                <img src="../uploads/RC_5by5.png" alt="Description of the image" width="500cm"  class="centered-image">
+            </p>
         </div><!-- end title -->
 
         <div class="row">
-            <div class="col-md-4">
-                <!-- <div class="services-inner-box">
+            <!-- <div class="col-md-4">
+                <div class="services-inner-box">
                     <div class="ser-icon">
                         <i class="flaticon-idea"></i>
                     </div>
@@ -111,48 +153,55 @@
                     <div class="ser-icon">
                         <i class="flaticon-idea"></i>
                     </div>
-                    <h2>2</h2>
-                    <p>b</p>
-                </div> -->
-            </div><!-- end col -->
-            <div class="col-md-4">
-                <!-- <div class="services-inner-box">
-                    <div class="ser-icon">
-                        <i class="flaticon-idea"></i>
-                    </div>
-                    <h2>3</h2>
-                    <p>c</p>
-                </div> -->
-            </div><!-- end col -->
-            <div class="col-md-4">
-                <!-- <div class="services-inner-box">
-                    <div class="ser-icon">
-                        <i class="flaticon-idea"></i>
-                    </div>
-                    <h2>4</h2>
-                    <p>d</p>
-                </div> -->
-            </div><!-- end col -->
-            <div class="col-md-4">
-                <!-- <div class="services-inner-box">
-                    <div class="ser-icon">
-                        <i class="flaticon-idea"></i>
-                    </div>
-                    <h2>5</h2>
-                    <p>e</p>
-                </div> -->
-            </div><!-- end col -->
-            <div class="col-md-4">
-                <!-- <div class="services-inner-box">
-                    <div class="ser-icon">
-                        <i class="flaticon-idea"></i>
-                    </div>
                     <h2>6</h2>
                     <p>f</p>
                 </div> -->
             </div><!-- end col -->
         </div><!-- end row -->
+
     </div><!-- end container -->
+
+
+    <div class="container">
+        <div class="section-title text-left">
+            <h2>Some Algorithms</h2>
+            <p>
+                I'm going to list somewhat useful resources here for future reference. 
+            </p>
+            <p>
+                Some good websites: 
+            </p>
+            <p>
+                &bull; <a href="https://cuberoot.me/">CubeRoot</a>
+            </p>
+            <p>
+                &bull; <a href="https://cubeskills.com/">CubeSkills</a>
+            </p>
+            <p>
+                &bull; <a href="https://ruwix.com/">Ruwix</a>
+            </p>
+            
+            <div class="indented-section">
+                <h3>&bull; <strong>3x3</strong></h3>
+                <p>Non-standard F2L by Xin Lv</p>
+                <p>
+                <embed src="../uploads/RC_3_f2l.pdf" type="application/pdf" width="100%" height="600px">
+                </p>
+            </div>
+
+            <div class="indented-section">
+                <h3>&bull; <strong>5x5</strong></h3>
+                <p>Last Two Centers</p>
+
+            </div>
+
+
+
+
+
+        </div><!-- end row -->
+    </div><!-- end container -->
+
 </div><!-- end section -->
 
 
