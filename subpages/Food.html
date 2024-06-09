@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
     <!-- Basic -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
-   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <!-- Mobile Metas -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
- 
-     <!-- Site Metas -->
-    <title>Gemma Huai</title>  
+
+    <!-- Site Metas -->
+    <title>Gemma Huai</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -28,7 +29,7 @@
     <link rel="stylesheet" href="../css/custom.css">
 
     <link rel="stylesheet" href="styles.css">
-	<script src="../js/modernizr.js"></script> <!-- Modernizr -->
+    <script src="../js/modernizr.js"></script> <!-- Modernizr -->
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -64,20 +65,41 @@
         }
 
         .indented-section {
-            
             margin-left: 30px;
             margin-top: 20px;
         }
+
+        .gallery-grid {
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .gallery-single {
+            position: relative;
+            overflow: hidden;
+            -webkit-box-shadow: 0 0 10px #ccc;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        .gallery-single img {
+            width: 80%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .gallery-text {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+        }
     </style>
-
 </head>
-
 
 <body>
     <header>
         <div class="container">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <!-- <img class="img-fluid" src="images/logo.png" alt="" /> -->
                 <p>Gemama's Site
                     <style>
                         p {
@@ -90,13 +112,13 @@
     </header>
 
     <div style="height: 50px;"></div>
- 
+
     <section id="about">
         <div class="container">
             <div class="section-title text-center">
                 <h1>Food</h1>
                 <style>
-                    h1{
+                    h1 {
                         font-size: 1.4cm;
                         color: #333;
                     }
@@ -108,47 +130,133 @@
         </div>
     </section>
 
+    <!-- Division Line -->
+    <hr class="custom-hr">
+    <div id="services" class="section lb">
+        <div class="container">
+            <div class="section-title text-left">
+                <h2>LA</h2>
+                <p>Some food in the LA area.</p>
+            </div><!-- end title -->
 
-
-<!-- Division Line -->
-<hr class="custom-hr">
-<div id="services" class="section lb">
-    <div class="container">
-        <div class="section-title text-left">
-            <h2>1 </h2>
-            <p>
-                to be done
-            </p>
-        </div><!-- end title -->
-
-        <div class="row">
-            <!-- <div class="col-md-4">
-                <div class="services-inner-box">
-                    <div class="ser-icon">
-                        <i class="flaticon-idea"></i>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_sashimi.png" class="img-fluid" alt="Sashimi">
+                        <p class="gallery-text">Delicious Sashimi</p>
                     </div>
-                    <h2>1</h2>
-                    <p>a</p>
-                </div> -->
-            </div><!-- end col -->
-            <div class="col-md-4">
-                <!-- <div class="services-inner-box">
-                    <div class="ser-icon">
-                        <i class="flaticon-idea"></i>
+                </div>
+
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_pasta_urchin.png" class="img-fluid" alt="Pasta with Urchin">
+                        <p class="gallery-text">Pasta with Sea Urchin</p>
                     </div>
-                    <h2>6</h2>
-                    <p>f</p>
-                </div> -->
-            </div><!-- end col -->
-        </div><!-- end row -->
+                </div>
 
-    </div><!-- end container -->
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_peruvian.png" class="img-fluid" alt="Peruvian Cuisine">
+                        <p class="gallery-text">Peruvian Cuisine</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_tempura.png" class="img-fluid" alt="Tempura">
+                        <p class="gallery-text">Japanese Tempura</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_duck.png" class="img-fluid" alt="Tempura">
+                        <p class="gallery-text">Beijing Roasted Duck</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_dumplings.png" class="img-fluid" alt="Tempura">
+                        <p class="gallery-text">Soup Dumplings</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_hotpot.png" class="img-fluid" alt="Tempura">
+                        <p class="gallery-text">Chongqing Hotpot</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_turkey.JPG" class="img-fluid" alt="Tempura">
+                        <p class="gallery-text">Turkey Legs</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_BBQchicken.png" class="img-fluid" alt="Tempura">
+                        <p class="gallery-text">Korean Fried Chicken</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_port.png" class="img-fluid" alt="Tempura">
+                        <p class="gallery-text">Hongshao Pork</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_brunch_Cupavida.png" class="img-fluid" alt="Tempura">
+                        <p class="gallery-text">Brunch at Copa Vida</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_dimsum.png" class="img-fluid" alt="Tempura">
+                        <p class="gallery-text">Dim Sum </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_JANshell.png" class="img-fluid" alt="Tempura">
+                        <p class="gallery-text">Sashimi</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_RoastedSalmon.png" class="img-fluid" alt="Tempura">
+                        <p class="gallery-text">Roasted Salmon in San Diego</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_SalmonSD.png" class="img-fluid" alt="Tempura">
+                        <p class="gallery-text">Salmon Sashimi Bowl</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 gallery-grid">
+                    <div class="gallery-single fix">
+                        <img src="../uploads/Food_taco.png" class="img-fluid" alt="Tempura">
+                        <p class="gallery-text">Seafood Taco</p>
+                    </div>
+                </div>
 
 
 
-</div><!-- end section -->
-
-
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
 
     
 
