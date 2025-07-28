@@ -7,44 +7,91 @@
   <link rel="stylesheet" href="../css/bootstrap.min.css" />
   <link rel="stylesheet" href="../style.css" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
     body {
       font-family: 'Poppins', sans-serif;
+      background-color: #3b4625fb;
+      color: white;
       margin: 0;
       padding: 0;
     }
 
-    .tabs-container {
-      padding: 60px 10%;
+    header {
+      position: sticky;
+      top: 0;
+      background-color: #3b4625fb;
+      z-index: 1000;
+      padding: 30px 12% 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5em;
+      margin: 0;
+      color: white;
     }
 
     .tab-buttons {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 30px;
+      gap: 14px;
+      justify-content: center;
+      padding: 10px 12% 20px;
+      background-color: #3b4625fb;
+      position: sticky;
+      top: 90px;
+      z-index: 999;
     }
 
     .tab-buttons button {
-      padding: 10px 20px;
-      border: none;
-      background-color: #ddd;
-      border-radius: 5px;
+      padding: 5px 28px;
+      border: 2px solid #ccc;
+      background-color: white;
+      color: black;
+      border-radius: 40px;
       cursor: pointer;
-      transition: 0.3s;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .tab-buttons button:hover {
+      border-color: #111;
+      color: #111;
     }
 
     .tab-buttons button.active {
       background-color: #111;
       color: white;
+      border-color: #111;
+    }
+
+    .tabs-container {
+      padding: 40px 12% 80px;
+      max-width: 1500px;
+      margin: auto;
     }
 
     .tab-content {
       display: none;
       animation: fadeIn 0.5s ease;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      color: #111;
     }
 
     .tab-content.active {
       display: block;
+    }
+
+    .tab-content h3 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      font-weight: 600;
     }
 
     @keyframes fadeIn {
@@ -55,58 +102,83 @@
 </head>
 <body>
 
+  <!-- Fixed Header -->
+  <header>
+    <h1>
+        <a href="#" id="welcome-link" style="text-decoration: none; color: inherit;font-size: 1.5em;">
+        Welcome to the Success Club
+        </a>
+    </h1>
+    <p style="margin-top: 10px; font-size: 1.1em;">Your digestive journey starts here 💩✨</p>
+  </header>
+
+  <!-- Fixed Buttons -->
+  <div class="tab-buttons">
+    <button class="tab-btn" data-tab="theory">Theory</button>
+    <button class="tab-btn" data-tab="guide">Guidance</button>
+    <button class="tab-btn" data-tab="community">Community</button>
+    <button class="tab-btn" data-tab="publicize">Merch</button>
+    <button class="tab-btn" data-tab="events">Upcoming Events</button>
+  </div>
+
+  <!-- Content Area -->
   <section class="tabs-container">
-    <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 30px;">Welcome to the Success Club</h2>
 
-    <!-- Tab Buttons -->
-    <div class="tab-buttons">
-      <button class="tab-btn active" data-tab="intro">Intro</button>
-      <button class="tab-btn" data-tab="members">Members</button>
-      <button class="tab-btn" data-tab="gallery">Gallery</button>
-      <button class="tab-btn" data-tab="events">Upcoming Events</button>
+    <div id="welcome" class="tab-content active">
+      <!-- <h2 style="text-align: center; font-size: 2.0em;">🎉 Welcome to the Success Club</h2> -->
+      <p style="text-align: center; max-width: 700px; margin: 20px auto; font-size: 1.2em;">
+        We are a group of curious, passionate, and slightly chaotic minds sharing experiences and laughs 💩✨
+      </p>
     </div>
 
-    <!-- Tab Content Areas -->
-    <div id="intro" class="tab-content active">
-      <h3>About the Club</h3>
-      <p>We are a group of curious, passionate, and slightly chaotic minds sharing ideas, experiences, and laughs.</p>
+    <div id="theory" class="tab-content">
+      <h3>Theory Development</h3>
+      <p></p>
     </div>
 
-    <div id="members" class="tab-content">
-      <h3>Meet the Members</h3>
-      <ul>
-        <li>Gemma – Cosmology + Calligraphy</li>
-        <li>Alex – Travel Addict + Yo-yo Champ</li>
-        <li>Samantha – Food Explorer + K-pop Fan</li>
-      </ul>
+    <div id="guide" class="tab-content">
+      <h3>Advice / Tips</h3>
     </div>
 
-    <div id="gallery" class="tab-content">
-      <h3>Photo Moments</h3>
-      <img src="../uploads/Food_sashimi.png" class="img-fluid mb-3" style="max-width: 300px;">
-      <img src="../uploads/Calli_jian.png" class="img-fluid" style="max-width: 300px;">
+    <div id="community" class="tab-content">
+      <h3>Interactive Community</h3>
+    </div>
+
+    <div id="publicize" class="tab-content">
+      <h3>Publicize the Organization</h3>
     </div>
 
     <div id="events" class="tab-content">
       <h3>Upcoming Events</h3>
-      <p>✨ August 15: K-pop Night & Chill<br>🍲 August 22: DIY Hotpot Party<br>🧩 August 29: Rubik’s Cube Showdown</p>
     </div>
+
   </section>
 
   <script>
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
+    const welcome = document.getElementById('welcome');
 
     tabButtons.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Remove active from all
+        // Remove all active states
         tabButtons.forEach(b => b.classList.remove('active'));
         tabContents.forEach(tc => tc.classList.remove('active'));
 
-        // Add active to clicked tab and content
+        // Activate clicked tab and hide welcome
         btn.classList.add('active');
+        welcome.classList.remove('active');
         document.getElementById(btn.dataset.tab).classList.add('active');
       });
+    });
+    // Welcome title click returns to welcome tab
+    document.getElementById('welcome-link').addEventListener('click', (e) => {
+        e.preventDefault();
+        // Remove active states
+        tabButtons.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(tc => tc.classList.remove('active'));
+        // Show welcome content
+        document.getElementById('welcome').classList.add('active');
     });
   </script>
 
