@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Success Club Member Portal</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .tabs-container {
+      padding: 60px 10%;
+    }
+
+    .tab-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .tab-buttons button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .tab-buttons button.active {
+      background-color: #111;
+      color: white;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="tabs-container">
+    <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 30px;">Welcome to the Success Club</h2>
+
+    <!-- Tab Buttons -->
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="intro">Intro</button>
+      <button class="tab-btn" data-tab="members">Members</button>
+      <button class="tab-btn" data-tab="gallery">Gallery</button>
+      <button class="tab-btn" data-tab="events">Upcoming Events</button>
+    </div>
+
+    <!-- Tab Content Areas -->
+    <div id="intro" class="tab-content active">
+      <h3>About the Club</h3>
+      <p>We are a group of curious, passionate, and slightly chaotic minds sharing ideas, experiences, and laughs.</p>
+    </div>
+
+    <div id="members" class="tab-content">
+      <h3>Meet the Members</h3>
+      <ul>
+        <li>Gemma – Cosmology + Calligraphy</li>
+        <li>Alex – Travel Addict + Yo-yo Champ</li>
+        <li>Samantha – Food Explorer + K-pop Fan</li>
+      </ul>
+    </div>
+
+    <div id="gallery" class="tab-content">
+      <h3>Photo Moments</h3>
+      <img src="../uploads/Food_sashimi.png" class="img-fluid mb-3" style="max-width: 300px;">
+      <img src="../uploads/Calli_jian.png" class="img-fluid" style="max-width: 300px;">
+    </div>
+
+    <div id="events" class="tab-content">
+      <h3>Upcoming Events</h3>
+      <p>✨ August 15: K-pop Night & Chill<br>🍲 August 22: DIY Hotpot Party<br>🧩 August 29: Rubik’s Cube Showdown</p>
+    </div>
+  </section>
+
+  <script>
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active from all
+        tabButtons.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(tc => tc.classList.remove('active'));
+
+        // Add active to clicked tab and content
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
