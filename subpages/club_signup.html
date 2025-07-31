@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smooth Success Club Signup</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    section {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 40px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 20px auto;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    .next-btn {
+      margin-top: 30px;
+      padding: 14px 28px;
+      font-size: 1em;
+      background: white;
+      color: #111;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .next-btn:hover {
+      background: #eee;
+    }
+
+    /* Anchor offset workaround (if needed for sticky headers) */
+    .anchor {
+      position: relative;
+      top: -60px;
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Slide 1 -->
+  <section style="background-image: url('uploads/slide1.jpg');">
+    <h2>Are you ready for digestive greatness?</h2>
+    <p>This journey is about smooth and successful bowel movements.</p>
+    <a href="#slide2" class="next-btn">Yes, I’m ready</a>
+  </section>
+
+  <!-- Slide 2 -->
+  <span id="slide2" class="anchor"></span>
+  <section style="background-image: url('uploads/slide2.jpg');">
+    <h2>✨ Fact #1</h2>
+    <p>Regular pooping is a vital sign of good health. We normalize it here.</p>
+    <a href="#slide3" class="next-btn">Got it</a>
+  </section>
+
+  <!-- Slide 3 -->
+  <span id="slide3" class="anchor"></span>
+  <section style="background-image: url('uploads/slide3.jpg');">
+    <h2>🧻 Are you committed to laugh, learn, and log your logs?</h2>
+    <p>We take pride in what others flush away.</p>
+    <a href="#slide4" class="next-btn">I solemnly swear</a>
+  </section>
+
+  <!-- Final Slide -->
+  <span id="slide4" class="anchor"></span>
+  <section style="background-image: url('uploads/slide4.jpg');">
+    <h2>🎉 Welcome to the Club</h2>
+    <p>You’re now part of the movement. Let’s keep things smooth.</p>
+    <a href="club_mem.html" class="next-btn">Enter Member Portal</a>
+  </section>
+
+</body>
+</html>
