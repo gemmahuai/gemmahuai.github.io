@@ -48,7 +48,7 @@
     .tab-buttons button {
       padding: 5px 28px;
       border: 2px solid #ccc;
-      background-color: white;
+      background-color: rgb(238, 231, 217);
       color: black;
       border-radius: 40px;
       cursor: pointer;
@@ -78,7 +78,7 @@
       display: none;
       animation: fadeIn 0.5s ease;
       padding: 20px;
-      background-color: #fff;
+      background-color: rgb(238, 231, 217);
       border-radius: 12px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.05);
       color: #111;
@@ -92,6 +92,100 @@
       font-size: 1.8em;
       margin-bottom: 10px;
       font-weight: 600;
+    }
+
+        /* Advice / Tips Layout */
+    .guide-layout {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      margin-top: 20px;
+    }
+
+    /* Left Sidebar */
+    .guide-sidebar {
+      position: sticky;
+      top: 140px; /* stays fixed while scrolling */
+      min-width: 160px;
+    }
+
+    .guide-sidebar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .guide-sidebar li {
+      margin-bottom: 14px;
+    }
+
+    .guide-sidebar a {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      color: #111;
+      background: rgba(255,255,255,0.7);
+      transition: background 0.2s ease;
+    }
+
+    .guide-sidebar a:hover {
+      background: rgba(0,0,0,0.1);
+    }
+
+    /* Right Main */
+    .guide-main {
+      flex: 1;
+      max-width: 900px;
+    }
+
+    .guide-main h4 {
+      margin-top: 50px;
+      font-size: 1.5em;
+      border-bottom: 2px solid rgba(0,0,0,0.1);
+      padding-bottom: 6px;
+    }
+
+    /* Tip Cards */
+    .tip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .tip-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      text-align: center;
+      color: #111;
+      transition: transform 0.2s ease;
+    }
+
+    .tip-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .tip-card img {
+      width: 100%;
+      max-height: 140px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 12px;
+    }
+
+    .tip-card h5 {
+      margin: 6px 0;
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+
+    .tip-card p {
+      font-size: 0.95em;
+      color: #444;
     }
 
     @keyframes fadeIn {
@@ -140,20 +234,78 @@
     </div>
 
     <div id="guide" class="tab-content">
-      <h3>Advice / Tips</h3>
-      <p>
-        tutorial for shitting 5 pounds at a time: 1. food 2. drink 3. gestures ...
-      </p>
-      <p>
-        Food: watermelon (for spraying); veggie (fiber in general); banana; kimchi; spicy food; big tacos?;  
-      </p>
-      <p>
-        Drink: banana latte; Prune juice!
-      </p>
-      <p>
-        Gesture: gravity theory; 
-      </p>
+      <h3 style="text-align:center;">Advice / Tips</h3>
+    
+      <div class="guide-layout">
+        <!-- Left Navigation -->
+        <nav class="guide-sidebar">
+          <ul>
+            <li><a href="#food">🍉 Food</a></li>
+            <li><a href="#drink">🥤 Drink</a></li>
+            <li><a href="#gestures">🧘 Gestures</a></li>
+          </ul>
+        </nav>
+    
+        <!-- Right Main Content -->
+        <div class="guide-main">
+          <section id="food">
+            <h4>Food</h4>
+            <div class="tip-grid">
+              <div class="tip-card">
+                <img src="../uploads/success/tip_watermelon.png" alt="Watermelon">
+                <h5>Watermelon</h5>
+                <p>• 92% water + (relatively low) fiber → helps soften stool and flush the system.</p>
+                <p>• Seeds! may help prevent constipation as the gut bacteria can feed on the prebiotic content of watermelon seeds.</p>
+                <p>• Fast digestion: start breaking down ~30-60 mins; fully processed and absorbed ~ 2-3 hours. </p>
+              </div>
+              <div class="tip-card">
+                <img src="uploads/banana.jpg" alt="Banana">
+                <h5>Banana</h5>
+                <p>Rich in soluble fiber → smooth digestion, prevents constipation.</p>
+              </div>
+              <div class="tip-card">
+                <img src="uploads/kimchi.jpg" alt="Kimchi">
+                <h5>Kimchi</h5>
+                <p>Fermented probiotics → support gut bacteria and regularity.</p>
+              </div>
+            </div>
+          </section>
+    
+          <section id="drink">
+            <h4>Drink</h4>
+            <div class="tip-grid">
+              <div class="tip-card">
+                <img src="uploads/prune_juice.jpg" alt="Prune Juice">
+                <h5>Prune Juice</h5>
+                <p>Natural laxative properties → classic for smooth moves.</p>
+              </div>
+              <div class="tip-card">
+                <img src="uploads/banana_latte.jpg" alt="Banana Latte">
+                <h5>Banana Latte</h5>
+                <p>Fiber + potassium → gentle, tasty way to stay regular.</p>
+              </div>
+            </div>
+          </section>
+    
+          <section id="gestures">
+            <h4>Gestures</h4>
+            <div class="tip-grid">
+              <div class="tip-card">
+                <img src="uploads/squat.jpg" alt="Squat Position">
+                <h5>Squat Posture</h5>
+                <p>Aligns colon naturally → less strain, smoother release.</p>
+              </div>
+              <div class="tip-card">
+                <img src="uploads/gravity.jpg" alt="Gravity Aid">
+                <h5>Gravity Assist</h5>
+                <p>Lean forward slightly → let gravity do the work.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </div>
+    
 
     <div id="community" class="tab-content">
       <h3>Interactive Community</h3>
@@ -162,13 +314,13 @@
         include: 
       </h4>
       <p>
-        Co-Founder/VVVVVIP: YF (LA)
+        Co-Founder/VVVVVIP: GH (LA), YF (LA)
       </p>
       <p>
         Members: JJ (LA), RW (LA), DT (LA), CC (Madison), MZ (Durham), SS (LA), YS (LA), MM (LA), GM (LA), CW (Palo Alto)
       </p>
       <p>
-        Well, you guys will have to officially sign up once I set up the webpage~ Appreciate it! 
+        Well, we will have to officially sign up once I set up the webpage~ Appreciate it! 
       </p>
 
       <p>
